@@ -33,3 +33,7 @@
 (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
+
+(load-file "./set-theme.el")
+(if (window-system)
+    (set-emacs-theme-dark))
