@@ -12,3 +12,5 @@
 
 (defun set-emacs-theme-dark ()
   (set-emacs-frames "dark"))
+
+(provide 'set-theme)

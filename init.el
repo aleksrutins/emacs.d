@@ -1,4 +1,5 @@
 (eval-when-compile (require 'use-package))
+(add-to-list 'load-path "~/.config/emacs")
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
@@ -34,6 +35,6 @@
 (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
 (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
 
-(load-file "./set-theme.el")
-(if (window-system)
+(require 'set-theme)
+(if (and (window-system) (string-equal system-type "gnu/linux"))
     (set-emacs-theme-dark))
